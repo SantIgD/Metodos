@@ -4,18 +4,15 @@ function [b,c] = Hornerd(a,x_0)
     //Salida: (p(x_0),q(x_0))
     
     n = length(a); //n = grado de p + 1
-    m = n-1;       //m = grado de q + 1
     
     b = a(n);
-    c = (n-1)*a(n);
+    c = b;
     
     for (i = 1 : n-2) do
         
-        k = a(n-i);
+        b =  a(n-i) + x_0*b;
         
-        b = k + x_0*b;
-        
-        c = (n-i-1)*k +x_0*c; // (n-i-1) ya que la posición p del vector a corresponde a x^(p-1)
+        c =  b + x_0*c;
     end
     
     b = a(1) + x_0*b;
@@ -47,4 +44,25 @@ disp("p_x0 = " + string(p_x0));
 disp("p_x0_siclab = " + string(p_x0_scilab));
 disp("q_x0 = " + string(q_x0));
 disp("q_x0_siclab = " + string(q_x0_scilab));
+
+
+ //p = 
+
+  //          2    3
+   //4 -3x +5x  +6x 
+
+ //q = 
+
+    //          2
+  //-3 +10x +18x 
+
+ //x_0 = 4
+
+ //p_x0 = 456
+
+ //p_x0_siclab = 456
+
+ //q_x0 = 325
+
+ //q_x0_siclab = 325
 

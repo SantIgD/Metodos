@@ -37,4 +37,11 @@ aprox = Taylor("%e^x",5,0,3,0.01);
 valorReal = %e^3;
 disp(aprox,"Valor Aproximado: ",valorReal, "Valor Real: ");
 
+//Valor Real: 
+
+//   20.085537
+
+// Valor Aproximado: 
+
+//   18.399994
 
