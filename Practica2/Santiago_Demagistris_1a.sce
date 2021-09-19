@@ -48,3 +48,33 @@ disp(aprox,"Valor aproximado por taylor en orden 5: ",valorReal, "Valor Real: ",
 //   18.399994
 
 
+
+
+// Ej1 a
+
+aproxCos = Taylor("cos(x)",5,0,0.5,0.01);
+valorReal = cos(0.5);
+errRel = abs(valorReal - aproxCos) / abs(valorReal);
+disp(errRel,"El error relativo es: ",aproxCos,"Valor aproximado por taylor en orden 5: ",valorReal, "Valor Real: ","cos(0.5)","Ej 1a");
+
+
+
+
+//Ej 1a
+
+// cos(0.5)
+
+// Valor Real: 
+
+//   0.8775826
+
+// Valor aproximado por taylor en orden 5: 
+
+//   0.8776042
+
+
+// Vemos que en 3 cifras significativas los numeros son coincidentes
+//
+// El error relativo es: 
+
+//   0.0000246
