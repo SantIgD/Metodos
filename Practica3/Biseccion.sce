@@ -14,25 +14,28 @@ function salida = biseccion(fun, alpha, omega, tol)
     f_en_a = f(alpha);
     f_en_b = f(omega);
     a      = alpha;
-    b      = omega;
+    b      = omega;   
     c      = (a + b) / 2;
+    
+    
+    if f_en_a * f_en_b >= 0 then
+        abort = 1; // no tiene sentido aplicar el método
+    else
+        abort = 0;         
+    end
+    
     f_en_c = f(c);
     
-    abort = 0;
-    
-    while (abs(f_en_c) > tol && abort == 0)
-        
-        if ((f_en_a * f_en_c) < 0) then
-            b = c; // f(c) positivo
+    while ( abort == 0 && abs(f_en_c) > tol )
+        if ((f_en_a * f_en_c) < 0) then // signo de f(c) opuesto a f(a) 
+            b = c; 
             f_en_b = f_en_c;
-        else if ((f_en_b * f_en_c) < 0) then
-            a = c; // f(c) negativo
+        else //  signo de f(c) opuesto a f(b)
+            a = c; 
             f_en_a = f_en_c;
-        else
-            abort = 1;
         end
         
-        c      = (a + b) / 2;   
+        c      = (a + b) / 2;
         f_en_c = f(c);
         
     end
