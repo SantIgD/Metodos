@@ -29,9 +29,25 @@ function salida = secante(fun, x0, x1, tol, iter)
         x1      = x0;
         f_en_x1 = f_en_x2;
         f_en_x2 = f(x2);
+        disp(x2)
         
     end
     if (abs(f_en_x2) > tol) then disp(i,'Se alcanzo el máximo de iteraciones'); end
     salida = x2;
 endfunction
+
+function output = f0(x)
+   
+    output = 0;
+endfunction
+function output = f(x)
+   
+    output = x^2/4- sin(x);
+endfunction
+format(25);
+v = linspace(-2,4,20);
+plot(v,f0,'r', v,f,'b');
+
+raiz = secante("(x^2)/4 - sin(x)", 1, 3, %eps, 50);
+//disp(raiz);
 
