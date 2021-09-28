@@ -66,7 +66,7 @@ function output = f0(x)
    
     output = 0;
 endfunction
-
+    
 
 v = linspace(27,30,50);
 plot(v,f0,'r', v,f1,'b');

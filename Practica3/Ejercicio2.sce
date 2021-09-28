@@ -1,4 +1,4 @@
-
+format(10);
 //Entrada:
 //  fun   : Ley de la función pasada como string
 //  alpha : Inicio del intervalo, negativo
@@ -55,11 +55,11 @@ function output = fa(x)
 endfunction
 
 
-//v = linspace(-2,2,20);
-//plot(v,f0,'r', v,fa,'b');
-//a1 =  biseccion("sin(x)-x^2/2",-0.2,0.8,10^-2);
-//a2 =  biseccion("sin(x)-x^2/2",1,2,10^-2);
-//disp(a2,a1);
+v = linspace(-2,2,20);
+plot(v,f0,'r', v,fa,'b');
+a1 =  biseccion("sin(x)-x^2/2",-0.2,0.8,10^-2);
+a2 =  biseccion("sin(x)-x^2/2",1,2,10^-2);
+disp(a2,a1);
 
 //b)
 function output = fb(x)
