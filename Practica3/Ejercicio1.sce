@@ -16,4 +16,7 @@ endfunction
 v = linspace(1.5,8,50);
 plot(v,nula,'r', v,f,'b');
 
-// No tiene raices xd
+
+//Las raices aproximadas graficamente son
+
+// 2.3, 4.7, 7.8
