@@ -13,7 +13,7 @@ endfunction
 
 
 
-v = linspace(-5,8,50);
+v = linspace(1.5,8,50);
 plot(v,nula,'r', v,f,'b');
 
 // No tiene raices xd
