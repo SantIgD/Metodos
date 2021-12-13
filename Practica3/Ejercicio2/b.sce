@@ -8,7 +8,6 @@ function output = fb(x)
     output = %e^(-x) - x^4;
 endfunction
 
-plot(linspace(0.5,1,20),fb);
 
 v = linspace(-2,2,20);
 plot(v,f0,'r', v,fb,'b');

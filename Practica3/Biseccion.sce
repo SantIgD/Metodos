@@ -40,3 +40,22 @@ function salida = biseccion(fun, alpha, omega, tol)
         
     
 endfunction
+
+// Ejemplo
+
+function output = f0(x)
+   
+    output = 0;
+endfunction
+
+function output = f(x)
+   
+    output = x^3+4*x^2-5*x-5;
+endfunction
+
+v = linspace(-2,2,20);
+plot(v,f0,'r', v,f,'b');
+a = "x^3+4*x^2-5* x+3";
+
+
+
